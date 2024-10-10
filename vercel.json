@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "Inventory_System_Simulation.py",
+            "use": "@vercel/python",
+            "config": {
+                "runtime": "python3.9",
+                "buildCommand": "pip install -r requirements.txt"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "Inventory_System_Simulation.py"
+        }
+    ]
+}
